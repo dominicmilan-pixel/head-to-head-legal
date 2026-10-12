@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Head to Head Privacy Policy</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.5; color: #1c1c1e; max-width: 42rem; margin: 2rem auto; padding: 0 1.25rem; }
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.15rem; margin-top: 1.75rem; }
+    code { font-size: 0.92em; }
+  </style>
+</head>
+<body>
+  <h1>Head to Head Privacy Policy</h1>
+  <p>Last updated: October 12, 2026</p>
+  <p>Head to Head is a party game published by Olive Dating LLC. This policy describes version 1.0.</p>
+
+  <h2>Accounts</h2>
+  <p>The app does not ask you to create an account. It does not ask for your name, email address, phone number, contacts, photos, or location. It does not include advertising, analytics, or tracking.</p>
+
+  <h2>Information stored on your phone</h2>
+  <p>The app saves one setting on the device: whether countdown sounds are on or off. That setting stays on the phone and is not sent with catalog requests.</p>
+  <p>When a published deck downloads successfully, the app saves that deck’s cover and card photos in the app’s private storage so the deck can be played offline. Uninstalling the app removes the setting and the downloaded photos.</p>
+  <p>The sample decks shipped inside the app are already on the phone. Playing a game does not upload card photos, guesses, or the sound setting.</p>
+
+  <h2>Requests the app makes</h2>
+  <p>When the deck shelf opens, or when you pull to refresh it, the app requests the published deck list from Head to Head Studio:</p>
+  <p><code>GET https://head-to-head-studio.lovable.app/api/public/catalog</code></p>
+  <p>If a deck has been published, the app then requests that deck’s download description and the cover and card image files it names. Those image addresses are short-lived links hosted for the Studio storage. The app does not send an account token, a purchase token, or the countdown-sound setting with these requests.</p>
+  <p>The sample decks remain playable when the phone is offline or when a download does not finish.</p>
+
+  <h2>What those requests expose</h2>
+  <p>The app does not add a device identifier, advertising identifier, or account identifier to the request.</p>
+  <p>Serving the request still reveals the connection to the hosts that receive it. The catalog host answers through Cloudflare. Signed image files are served from the Studio storage host. The app’s own Studio code does not read the IP address, user agent, or device model from these requests, and it does not write them into the game database. There is no player table and no request log table in that database.</p>
+  <p>How long Cloudflare, the Studio host, or the storage host keep their own connection logs is not set in the Head to Head project, and this policy does not claim a retention period for those logs.</p>
+
+  <h2>Permissions</h2>
+  <p>Version 1.0 does not request access to the microphone, camera, photo library, contacts, location, or tracking.</p>
+  <p>The app plays short sounds and can keep the screen awake while a card is showing. Neither of those features sends information off the device.</p>
+
+  <h2>Purchases</h2>
+  <p>Version 1.0 does not sell decks and does not contact a payment provider.</p>
+
+  <h2>Children</h2>
+  <p>The game does not ask anyone, including children, to create an account or to enter personal information. The network requests described above can still occur when the deck shelf refreshes.</p>
+
+  <h2>Changes</h2>
+  <p>If a later version starts collecting personal information, this policy will be updated before that version is released.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: <a href="mailto:joinoliveapp@gmail.com">joinoliveapp@gmail.com</a></p>
+  <p>That address is the existing Apple Developer contact for Olive Dating LLC. Head to Head does not have a separate support inbox on file.</p>
+</body>
+</html>
